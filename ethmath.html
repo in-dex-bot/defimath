@@ -228,11 +228,9 @@
 	    <div class="row">
 	            <div class="col-sm-2" style={colStyle} ></div>
 		    <div class="col-sm-6" style={colStyle} >
-			    <b>Costo transferencia de Ether (1 gas)</b> El Gas en Ethereum es una unidad de medida utilizada para medir el trabajo realizado 
-			    por Ethereum para realizar transacciones o cualquier 
-			    interacción dentro de la red <a href="https://www.miethereum.com/ether/gas/" target="_blank">Aprendé más aquí</a>. 
-			    (El mínimo de gas limit para una transacción es de 21.000, y se puede hacer la analogía de este concepto con la medida de combustible "Galón" para vehiculos
-			    de motor, así 1 gas = 1 galón)
+			    <b>Catidad de gas que consume la transacción</b> El Gas en Ethereum es una unidad de medida utilizada para medir el trabajo realizado 
+			    por Ethereum para realizar transacciones o cualquier interacción dentro de la red (El mínimo de gas para una transacción es de 21.000)
+			    <a href="https://www.miethereum.com/ether/gas/" target="_blank">Aprendé más aquí</a>
 		    </div>
 		    <div class="col-sm-2" style={colStyleInput} >
 			    <b>Gas</b> <input type="text"
@@ -248,10 +246,10 @@
 	            <div class="col-sm-2" style={colStyle} ></div>
 		    <div class="col-sm-6" style={colStyle} >
 		            <hr/> 
-			    <b>Costo transferencia gas (Gwei) ( n * 10^-9 ETH ) | 1 Gwei = 0.000000001 ETH </b> Los valores estandar 42, 49, 58, etc. 
+			    <b>Cantidad de gas usado en la Txn (Gwei) ( n * 10^-9 ETH ) | 1 Gwei = 0.000000001 ETH </b> Los valores estandar 42, 49, 58, etc. 
 			    los encuentras aquí <a href="https://ethgasstation.info/" target="_blank">Aprendé más sobre gas/Gwei</a> (para entenderlo fácilmente puede pensar en el
 			    Gwei como una relación entre la cantidad de galones y el tipo de combustible que se utiliza en los vehiculos: Diesel, gasolina corriente, extra, gas natural 
-			    y que proporciona mayor o menor potencia según el tipo de vehiculo, así 42 Gwei = 42 galones de combustible)
+			    y que proporciona mayor o menor potencia según el tipo de vehiculo, así 42 Gwei es multiplicar 42 x 21000 gas)
 	            </div>
 		    <br/><br/>
 		    <div class="col-sm-2" style={colStyleInput} >
@@ -267,7 +265,7 @@
 	            <div class="col-sm-2" style={colStyle} ></div>
 		    <div class="col-sm-6" style={colStyle} >
 		            <hr/> 
-	    		    <b>Tarifa transacción (ETH) | (n gas * n Gwei's)</b>
+	    		    <b>Tarifa transacción (ETH) | ( cantidad de gas * n Gwei's)</b>
 	            </div>
 		    <br/><br/>
 		    <div class="col-sm-2" style={colStyleInput} >
