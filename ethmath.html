@@ -158,7 +158,7 @@
 	                var num = ( this.state.gas*(val/1000000000) )*this.state.costoeth;
 			var n   = num.toFixed(2);
 			var num2 = ( this.state.gas*(val/1000000000) )*this.state.costoeth*3473;
-			var n2 = num.toFixed();
+			var n2 = Math.round(num2);
           /**/  	this.setState({
 	  /**/			gwei      : val,
           /**/     		eth       : e,
