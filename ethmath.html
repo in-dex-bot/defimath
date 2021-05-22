@@ -231,12 +231,7 @@
 	    <div>
 	    
 	    <div class="row">
-	            <div class="col-sm-2" style={colStyle} ></div>
-		    <div class="col-sm-6" style={colStyle} >
-			    <b>Catidad de gas que consume la transacción</b> El Gas en Ethereum es una unidad de medida utilizada para medir el trabajo realizado 
-			    por Ethereum para realizar transacciones o cualquier interacción dentro de la red (El mínimo de gas para una transacción es de 21.000)
-			    <a href="https://www.miethereum.com/ether/gas/" target="_blank">Aprendé más aquí</a>
-		    </div>
+	            <div class="col-sm-2" style={colStyle} ></div>		
 		    <div class="col-sm-2" style={colStyleInput} >
 			    <b>Gas</b> <input type="text"
 			    name="gas" 
@@ -244,18 +239,16 @@
 			    value={this.state.gas}
 			    onChange={this.myChangeHandler} className="form-control"/>
 		    </div>
+		    <div class="col-sm-6" style={colStyle} >
+			    <b>Catidad de gas que consume la transacción</b> El Gas en Ethereum es una unidad de medida utilizada para medir el trabajo realizado 
+			    por Ethereum para realizar transacciones o cualquier interacción dentro de la red (El mínimo de gas para una transacción es de 21.000)
+			    <a href="https://www.miethereum.com/ether/gas/" target="_blank">Aprendé más aquí</a>
+		    </div>
 		    <div class="col-sm-2" style={colStyle} ></div>
              </div>
 	     
 	     <div class="row">
 	            <div class="col-sm-2" style={colStyle} ></div>
-		    <div class="col-sm-6" style={colStyle} >
-		            <hr/> 
-			    <b>Cantidad de gas usado en la Txn (Gwei) ( n * 10^-9 ETH ) | 1 Gwei = 0.000000001 ETH </b> Los valores estandar 42, 49, 58, etc. 
-			    los encuentras aquí <a href="https://ethgasstation.info/" target="_blank">Aprendé más sobre gas/Gwei</a> (para entenderlo fácilmente puede pensar en el
-			    Gwei como una relación entre la cantidad de galones y el tipo de combustible que se utiliza en los vehiculos: Diesel, gasolina corriente, extra, gas natural 
-			    y que proporciona mayor o menor potencia según el tipo de vehiculo, así 42 Gwei es multiplicar 42 x 21000 gas)
-	            </div>
 		    <br/><br/>
 		    <div class="col-sm-2" style={colStyleInput} >
 			    <b>Gwei</b> <input type="text" autoFocus
@@ -264,15 +257,17 @@
 			    value={this.state.gwei}
 			    onChange={this.myChangeHandler} className="form-control" />
                     </div>
+		    <div class="col-sm-6" style={colStyle} >
+		            <hr/> 
+			    <b>Cantidad de gas usado en la Txn (Gwei) ( n * 10^-9 ETH ) | 1 Gwei = 0.000000001 ETH </b> Los valores estandar 42, 49, 58, etc. 
+			    los encuentras aquí <a href="https://ethgasstation.info/" target="_blank">Aprendé más sobre gas/Gwei</a> (para entenderlo fácilmente puede pensar en el
+			    Gwei como una relación entre la cantidad de galones y el tipo de combustible que se utiliza en los vehiculos: Diesel, gasolina corriente, extra, gas natural 
+			    y que proporciona mayor o menor potencia según el tipo de vehiculo, así 42 Gwei es multiplicar 42 x 21000 gas)
+	            </div>		    
              </div>
 	     
 	     <div class="row">
-	            <div class="col-sm-2" style={colStyle} ></div>
-		    <div class="col-sm-6" style={colStyle} >
-		            <hr/> 
-	    		    <b>Tarifa transacción (ETH) | ( cantidad de gas * n Gwei's)</b>
-	            </div>
-		    <br/><br/>
+	            <div class="col-sm-2" style={colStyle} ></div>		    
 		    <div class="col-sm-2" style={colStyleInput} >
 			    <b>ETH</b> <input type="text" 
 			    name="eth" 
@@ -282,14 +277,15 @@
 			    style={totalStyle2}
 			    disabled/>
 		   </div>
+		   <br/><br/>
+		   <div class="col-sm-6" style={colStyle} >
+		            <hr/> 
+	    		    <b>Tarifa transacción (ETH) | ( cantidad de gas * n Gwei's)</b>
+	            </div>
              </div>
 	     
 	      <div class="row">
-	            <div class="col-sm-2" style={colStyle} ></div>
-		    <div class="col-sm-6" style={colStyle} >
-		            <hr/> 
-            		    <b>Costo del ETH en $US {this.state.hoy}</b> 
-	            </div>
+	            <div class="col-sm-2" style={colStyle} ></div>	    
 		    <div class="col-sm-2" style={colStyleInput} > 
 			    <b>1 ETH = </b><input type="text" 
 			    name="costoeth" 
@@ -300,14 +296,14 @@
 			    className="form-control"
 			    disabled/>
                      </div>
+		     <div class="col-sm-6" style={colStyle} >
+		            <hr/> 
+            		    <b>Costo del ETH en $US {this.state.hoy}</b> 
+	            </div>
              </div>
 
               <div class="row">
 	            <div class="col-sm-2" style={colStyle} ></div>
-		    <div class="col-sm-6" style={colStyle} >
-		            <hr/>
-            		    <b>Tarifa transacción ($US) </b>
-	            </div>
 		    <div class="col-sm-2" style={colStyleInput} > 
 			    <b>$US</b> <input type="text" 
 			    name="tarifaus" 
@@ -317,6 +313,10 @@
 			    style={totalStyle} 
 			    disabled/>
                    </div>
+		    <div class="col-sm-6" style={colStyle} >
+		            <hr/>
+            		    <b>Tarifa transacción ($US) </b>
+	            </div>		    
              </div>
        
             <input type="hidden" 
@@ -326,10 +326,6 @@
 
             <div class="row">
 	            <div class="col-sm-2" style={colStyle} ></div>
-		    <div class="col-sm-6" style={colStyle} >
-		            <hr/>
-            		    <b>Tarifa Transacción ($COP)</b>
-	            </div>
 		    <div class="col-sm-2" style={colStyleInput} >	    
 			    <b>$COP</b> <input type="text" 
 			    name="tarifacop" 
@@ -339,6 +335,10 @@
 			    style={totalStyle3} 
 			    disabled />
                      </div>
+		    <div class="col-sm-6" style={colStyle} >
+		            <hr/>
+            		    <b>Tarifa Transacción ($COP)</b>
+	            </div>		    
              </div>
 				   
 	 </div>
