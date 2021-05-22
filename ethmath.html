@@ -153,11 +153,13 @@
           /**/ 	}
           /**/
           /**/  if(nam == "gwei"){ 
+	                var num = ( this.state.gas*(val/1000000000) )*this.state.costoeth;
+			var n = num.toFixed(2);
           /**/  	this.setState({
 	  /**/			gwei      : val,
           /**/     		eth       : this.state.gas*(val/1000000000),
           /**/    		costoeth  : this.state.costoeth,
-          /**/   		tarifaus  : ( this.state.gas*(val/1000000000) )*this.state.costoeth,
+          /**/   		tarifaus  : n,
           /**/   		tarifacop : ( this.state.gas*(val/1000000000) )*this.state.costoeth*3473
 	  /**/		});
           /**/ 	}
