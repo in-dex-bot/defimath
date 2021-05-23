@@ -289,10 +289,10 @@
 			    <b>TRANSACTION FEE (ETH)</b> 
 			    <input type="text" 
 			    name="eth" 
-			    defaultValue={this.state.eth}
+			    defaultValue={this.state.ethfee}
 			    onChange={this.myChangeHandler}
 			    className="form-control"
-			    disabled/>
+			    />
 		   </div>
              </div>
 	     
@@ -328,7 +328,16 @@
 		    <div class="col-sm-6" style={colStyle} >
 		            <hr/>
             		    <b>Tarifa transacción ($US) </b>
-	            </div>		    
+	            </div>
+		    <div class="col-sm-2" style={colStyleInput} > 
+			    <b>$US</b> <input type="text" 
+			    name="tarifaus" 
+			    defaultValue="this.state.tarifaus"
+			    value={this.state.tarifausfee}
+			    onChange={this.myChangeHandler} className="form-control" 
+			    style={totalStyle} 
+			    disabled/>
+                   </div>
              </div>
        
             <input type="hidden" 
@@ -350,7 +359,16 @@
 		    <div class="col-sm-6" style={colStyle} >
 		            <hr/>
             		    <b>Tarifa Transacción ($COP)</b>
-	            </div>		    
+	            </div>
+		    <div class="col-sm-2" style={colStyleInput} >	    
+			    <b>$COP</b> <input type="text" 
+			    name="tarifacop" 
+			    defaultValue="this.state.tarifacopfee"
+			    value={this.state.tarifacop}
+			    onChange={this.myChangeHandler} className="form-control" 
+			    style={totalStyle3} 
+			    disabled />
+                     </div>
              </div>
 				   
 	 </div>
