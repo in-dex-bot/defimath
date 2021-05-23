@@ -189,9 +189,9 @@
 	  /**/	var obj = this.state.referencevar[0];
           /**/
           /**/  if(nam == "ethfee"){ 
-	                var num  = nam*this.state.costoeth;
+	                var num  = val*this.state.costoeth;
 			var n    = num.toFixed(2);
-			var num2 = nam*this.state.costoeth*3473;
+			var num2 = val*this.state.costoeth*3473;
 			var n2 = Math.round(num2);
           /**/  	this.setState({
           /**/   		tarifausfee  : n,
