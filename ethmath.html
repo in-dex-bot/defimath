@@ -183,6 +183,26 @@
           /**/ 	console.log(this.state.referencevar[0]);
 	  }
 	  
+	  myChangeHandler2 = (event) => {
+          /**/ 	let nam = event.target.name;
+	  /**/ 	let val = event.target.value;
+	  /**/	var obj = this.state.referencevar[0];
+          /**/
+          /**/  if(nam == "ethfee"){ 
+	                var num  = nam*this.state.costoeth;
+			var n    = num.toFixed(2);
+			var num2 = nam*this.state.costoeth*3473;
+			var n2 = Math.round(num2);
+          /**/  	this.setState({
+          /**/   		tarifausfee  : n,
+          /**/   		tarifacopfee : n2
+	  /**/		});
+          /**/ 	}
+          /**/
+          /**/ 	Object.assign(obj, {[nam]: val});
+          /**/ 	console.log(this.state.referencevar[0]);
+	  }
+	  
 	  render() {
 	  /**/  var formularioStyle = {
 	  /**/		padding: 23
@@ -291,7 +311,7 @@
 		    <div class="col-sm-2" style={colStyleInput} >
 			    <b>TRANSACTION FEE (ETH)</b> 
 			    <input type="text" 
-			    name="eth" 
+			    name="ethfee" 
 			    defaultValue={this.state.ethfee}
 			    onChange={this.myChangeHandler2}
 			    className="form-control"
