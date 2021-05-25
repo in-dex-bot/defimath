@@ -239,6 +239,11 @@
           /**/		background: '#f2f5bd99',
           /**/		fontWeight: "bold"
 	  /**/  }
+	        var totalStyle4 = {
+          /**/		background: '#f2f5bd99',
+          /**/		fontWeight: "bold",
+	                fontColor: "blue"
+	  /**/  }
 	  /**/	var colStyle = {
           /**/		background: '',
 	                fontSize: '13px'
@@ -344,8 +349,18 @@
                      </div>
 		     <div class="col-sm-6" style={colStyle} >
 		            <hr/> 
-            		    <b>Costo del ETH en $US {this.state.hoy}</b> 
+            		    <b style={totalStyle4}> Costo del ETH en $US {this.state.hoy}</b> 
 	            </div>
+		    <div class="col-sm-2" style={colStyleInput} > 
+			    <b>1 ETH = </b><input type="text" 
+			    name="costoeth" 
+			    defaultValue="this.state.costoeth"
+			    value={this.state.costoeth}
+			    onChange={this.myChangeHandler}
+			    style={totalStyle2}
+			    className="form-control"
+			    disabled/>
+                     </div>
              </div>
 
               <div class="row">
